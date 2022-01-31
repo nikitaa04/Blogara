@@ -1,0 +1,40 @@
+
+ body{
+ background-image: url("https://cdn.wallpapersafari.com/30/10/CPZIcd.jpg"); 
+ font-family: monospace;
+ font-family: 'Montserrat', sans-serif;
+} 
+
+.btn{
+    border-radius: 18px;
+    margin-left: 170px;
+    color: white;
+    margin-top: 80px;
+    padding: 8px 20px 8px 20px;
+}
+
+
+.content{
+    margin-left: 24px;
+    padding-top: 20px;
+    position : relative;
+    top: 20px;
+    color: grey;
+}
+
+.row{
+    height: 400px;
+}
+
+.profile{
+    margin-top: 120px;
+    margin-left: 10%;
+    font-size: larger;
+}
+
+
+
+.img{
+      background-image: url("https://www.asianpaints.com/content/dam/asian_paints/colours/room-shots/yellows-greens-colour-shade-asian-paints-7926.jpg");
+      }
+

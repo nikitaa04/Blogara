@@ -1,0 +1,40 @@
+<%- include("header"); -%>
+  
+<head>
+  <link rel="stylesheet" href="/css/sign.css">
+</head>
+
+<body >
+
+  <div class="sign-in" >
+      
+    <div class="top">
+     <h1>Sign In!</h1>
+     <p style="margin-left: 35px;">Welcome</p></div>
+ 
+    <div style="background-color: white; padding: 50px 30px 50px 30px"> 
+   <form action="/user/create-session" method="POST">
+       <div class="form-group">
+       <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+       
+     </div>
+     
+     <div class="form-group">
+       <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+     </div>
+      
+     <button type=" submit " class="btn btn-warning" ><strong>SUBMIT</strong></button>
+     </form></div></div></div>
+ 
+ </body>
+ </html>  
+
+
+    <!--<h2>This is Sign-in  Page</h2>
+   <form action="/user/create-session" method="POST">
+     Email : <input type="email" name="email"><br>
+     Pasword : <input type="password" name="password"><br>
+     <button type="submit">Submit</button>
+   </form>
+</body>
+</html> -->

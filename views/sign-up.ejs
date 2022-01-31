@@ -1,0 +1,38 @@
+
+  <%- include("header"); -%>
+  
+  <head>
+    <link rel="stylesheet" href="/css/sign.css">
+  </head>
+  
+  <body >
+  <div class="sign-up" >
+      
+   <div class="top">
+    <h1>Sign Up!</h1>
+    <p style="margin-left: 12px;">Make a account</p></div>
+
+   <div style="background-color: white; padding: 50px 30px 50px 30px"> 
+  <form action="/user/create" method="POST" autocomplete="off">
+    <div class="form-group">
+        <input type="text"  name="name" class="form-control" id="exampleInputPassword1" placeholder="User name">
+      </div>
+    <div class="form-group">
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      
+    </div>
+    
+    <div class="form-group">
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+     
+    <div class="form-group">
+        <input type="password" name="confirmpassword" class="form-control" id="exampleInputPassword1" placeholder=" Confirm Password">
+      </div>
+     
+
+      <button  class="btn btn-warning" type="submit"><strong>SUBMIT</strong></button>
+    </form></div></div></div>
+
+</body>
+</html>

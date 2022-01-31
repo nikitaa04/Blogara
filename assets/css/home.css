@@ -1,0 +1,27 @@
+body {
+  background-image: url("https://flevix.com/wp-content/uploads/2021/05/Bubble-Background.svg");
+  color: beige;
+ }
+
+ .btn{
+  border-radius: 18px;
+  margin-left: 100px;
+  color: rgb(194, 188, 188);
+  margin-top: 5px;
+  padding: 8px 20px 8px 20px;
+}
+
+ .post{
+   background-color: yellow;
+   width: 400px;
+   color: rgb(43, 32, 73);
+   border-radius: 12px;
+   padding: 10px;
+   border: solid 5px wheat;
+   font-size: larger;
+   font-style: italic;
+ }
+
+ .navbar{
+   color: white;
+ }

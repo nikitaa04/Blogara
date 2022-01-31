@@ -1,0 +1,27 @@
+<%- include("header"); -%>
+
+  <head>
+    <link href="/css/profile.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    </head>
+
+
+<body>
+   
+
+    <div class="profile shadow-lg p-3 mb-5 bg-body rounded container">
+     <div class="row container">
+       <div  class="col img "> 
+        </div> 
+       <div class="col content  shadow-lg p-3 mb-5 bg-body rounded container">
+      <h3 style=" color: black; ">This is  <%= title %></h3>
+    <h4>Name : <%=user.name %></h4>
+    <h4>Email id: <%=user.email %></h4>
+    <h4>Password : <%=user.password %></h4>
+    <a href="/user/delete">
+      <button type=" submit " class="btn btn-warning" ><strong>LOG OUT</strong></button>
+    </a></h4>
+    </div></div>
+     </div>
+</body>
+</html>
