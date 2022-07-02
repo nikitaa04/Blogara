@@ -1,7 +1,26 @@
 body {
   background-image: url("https://flevix.com/wp-content/uploads/2021/05/Bubble-Background.svg");
-  color: beige;
+  color: white;
  }
+
+
+
+/*.navbar */
+
+ .heading1{
+  font-size:6.5rem;
+  font-family: 'Nothing You Could Do', cursive;
+
+}
+
+
+
+
+
+.titlebox{
+  margin-left: 500px;
+  margin-top: 150px;
+}
 
  .btn{
   border-radius: 18px;
@@ -11,17 +30,39 @@ body {
   padding: 8px 20px 8px 20px;
 }
 
+
+.navbar-cointainer{
+  background-color: #D885A3;
+  padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    border: solid rgb(250, 250, 250) 3px;
+}
+
+
+
  .post{
-   background-color: yellow;
+   background-color: rgb(161, 161, 100);
    width: 400px;
    color: rgb(43, 32, 73);
    border-radius: 12px;
    padding: 10px;
-   border: solid 5px wheat;
-   font-size: larger;
+   border: solid 3px wheat;
+   font-size: 16px;
    font-style: italic;
  }
 
+
+ 
+
  .navbar{
    color: white;
+ }
+
+ .navbar-content{
+   font-size: 1.2rem;
+   font-family: 'Dancing Script', cursive;
+  font-family: 'Roboto Slab', serif;
+  color: aquamarine;
+
  }
