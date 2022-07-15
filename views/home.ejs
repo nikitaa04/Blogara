@@ -1,5 +1,6 @@
 <%- include("header"); -%>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Poppins&family=Yeseva+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Homemade+Apple&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Roboto+Slab:wght@300&family=Rock+Salt&display=swap" rel="stylesheet">
 <head>
    <link href="/css/home.css" rel="stylesheet">
@@ -23,9 +24,9 @@
           
             <div class="navbar-nav  justify-content-end  "  >
                 <% if (locals.user){ %>
-                   <a class="nav-link active" style= "margin-right: 450px;"aria-current="page" href="/user/profile/<%= user.id %>">Profile</a>  <% } %>
-            <a class="nav-link active"style= "margin-right: 400px;" href="/sign-up">Sign-up</a>
-             <a class="nav-link active " href="/sign-in">Sign-in</a></div>
+                   <a class="nav-link active" style= "margin-right: 450px;"aria-current="page" href="/user/profile/<%= user.id %>">Profile</a> <% } %>
+           <div class="vl"><a class="nav-link active "style= "margin-right: 400px;" href="/sign-up">Sign-up</a></div> 
+           <div class="vl"> <a class="nav-link active " href="/sign-in">Sign-in</a></div>
               
             </div>
           </div>
@@ -39,7 +40,7 @@
 <strong>
     Blogara</strong>
 </div>
-<h4 style="padding-left: 80px; padding-top: 20px;">Let's Start Together</h4>
+<h4 style="padding-left: 0px; padding-top: 20px;">Everything Is Personal Including This Blog</h4>
 </div>
 
 
@@ -57,38 +58,44 @@
     <% if(locals.user){ %>
         <h4> Create Post</h4>
        
-    <form  action="/posts/create" id="new-post-form" method="POST" class="form-group">
-         <textarea name="content"  cols="30" rows="2" placeholder="Type Here..."></textarea>
+     <form  action="/posts/create" id="new-post-form" method="POST" class="form-group">
+         <textarea class="contentarea" name="content"  cols="100" rows="10" placeholder="Type Here..."></textarea>
         <!-- <input  name="content" class="form-control"  placeholder="Type Here...">-->
-       
-        <input    type="submit" value="Post">
+        <div class="submitbtn"><button  class="btn btn-outline-dark postbtn" type="submit">SUBMIT</button></div>
+
     </form>
-    <% } %>
+    <% } %></section>
+
+    <div class="heading"><h1>Train of Thoughts</h1></div>
+
 
     <div id="posts-list-container">
+
         <ul>
             <% for(post of posts){ %>
                 <li>
                     <p>
-                     <% if (locals.user && locals.user.id == post.user.id) { %>
-                            <small>
-                                <a href="/posts/destroy/<%= post.id %>">X</a>
-                            </small>
-                           <% } %>
-                           
-                        
+     
                      <div class="post"><strong><%= post.content %></strong></div>
                       <br>
-                      <small><%="@"%> <%= post.user.name %></small>  
+                      <% if (locals.user && locals.user.id == post.user.id) { %>
+                        <small>
+            
+                            <a href="/posts/destroy/<%= post.id %>"  class="fa-solid fa-trash-can bin"></a>
+                        </small>
+                       <% } %>
+                     <!-- <small><%="@"%> <%= post.user.name %></small>  -->
                     </p></li>
                     
                     <!--form for comment -->
                     <div id="comment-section">
                         <% if(locals.user) { %>
                     <form action="/comment/create" method="POST">
-                        <textarea  type="text" name="content" rows="1" placeholder="comment here..."></textarea>
+                        <textarea class="commentarea"  type="text" name="content" cols="50" rows="1" placeholder="comment here..."></textarea>
                         <input name="post" type="hidden" value="<%= post._id %>">
-                        <input type="submit" value="add comment">
+                        <button  class=" btn fa-solid fa-2x fa-circle-plus commentbtn"type="submit"></button>
+                          
+                        
 
                     </form><% } %></div>
 
@@ -97,21 +104,22 @@
                         <ul id="post-id-<%= post._id %>">
                             <% for(comment of post.comments) { %>
                         
-                            <% if (locals.user && locals.user.id == comment.user.id){ %>
-                                    <small>
-                                        <a href="/comment/destroy/<%= comment.id %>">X</a>
-                                    </small>
-                                <% } %>
+                
 
-                          <small>  <%= comment.content  %> <%= comment.user.name %> </small><br>
+                          <small class="comments"> <%="  " %> <%= comment.content  %><%=" @" %> <%= comment.user.name %> </small>
+                            <% if (locals.user && locals.user.id == comment.user.id){ %>
+                                <small>
+                                    <a href="/comment/destroy/<%= comment.id %>" class="fa-solid fa-trash-can bin"></a>
+                                </small>
+                            <% } %>
+                            <br><br>
                              <% } %>  
                            
                         </ul>
                     </div>   
-                    <% } %></ul>
+                    <% } %></ul></div>
 
-
-                  <% if(locals.user) {%>
+                 <!-- <% if(locals.user) {%>
                     <section id="user-friends">
                         <h4>Friends</h4>
                         <% for(u of allusers){%>
@@ -119,12 +127,14 @@
                                 <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
                             </p>
                         <% } %>      <% } %>   
+                        </div></div>-->
+
+
+                        <div class="copyright">
+
                         </div>
 
-               
+ <script src="https://kit.fontawesome.com/8ac4e551f7.js" crossorigin="anonymous"></script>           
 
 </body>
 </html>
-                           
-                         
-   
